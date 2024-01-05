@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <title>Document</title>
+</head>
+<body class="bg-cyan-400" >
+    <nav class="p-5 bg-white shadow-md md:flex md:items-center md:justify-between" >
+        <div class=" flex items-center justify-between mx-2">
+            <span class="text-2xl font-[poppins] font-bold" > 
+                tailwind 
+            </span>
+            <span>
+                <ion-icon onclick="Menu(this)" name="menu" class="text-3xl cursor-pointer md:hidden block" ></ion-icon>
+            </span>
+        </div>
+        <ul class="md:flex md:items-center z-[-1] md:z-auto md:w-auto md:static absolute bg-white w-full left-0 md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500" >
+            <li  class="mx-4  my-6 md:my-0"><a class="text-xl hover:text-cyan-500 duration-500" href="">Home</a></li>
+            <li class="mx-4 my-6 md:my-0"><a class="text-xl hover:text-cyan-500 duration-500" href="">Service</a></li>
+            <li class="mx-4 my-6 md:my-0"><a class="text-xl hover:text-cyan-500 duration-500" href="">About</a></li>
+            <li class="mx-4 my-6 md:my-0"><a class="text-xl hover:text-cyan-500 duration-500" href="">Contact</a></li>
+            <li class="mx-4 my-6 md:my-0"><a class="text-xl hover:text-cyan-500 duration-500" href="">Blog</a></li>
+
+            <button class="bg-cyan-400 text-white font-[poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500 rounded-lg" >Get Started</button>
+        </ul>
+    </nav>
+
+    <script>
+        function Menu(e){
+            let list = document.querySelector('ul')
+            e.name === 'menu' ? (e.name = "close" , list.classList.add('top-[70px]'), list.classList.add('opacity-100')) : 
+            (e.name = "menu" , list.classList.remove('top-[70px]'), list.classList.remove("opacity-100"))
+        }
+    </script>
+
+</body>
+</html>
